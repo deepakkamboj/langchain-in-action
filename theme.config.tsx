@@ -2,7 +2,7 @@ import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  logo: <span>Langchain in Action</span>,
+  logo: <span>LangChain in Action</span>,
   project: {
     link: "https://github.com/deepakkamboj/langchain-in-action",
   },
