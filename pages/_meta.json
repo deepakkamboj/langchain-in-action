@@ -1,0 +1,16 @@
+{
+  "index": "Introduction",
+  "table-of-contents": "Table of Contents",
+  "part1-foundations": "Part I: Foundations",
+  "part2-multimodal": "Part II: Multi-Modal Integration",
+  "part3-context": "Part III: Context and Memory",
+  "part4-retrieval": "Part IV: Advanced Retrieval and Knowledge",
+  "part5-toolcalling": "Part V: Tool Calling and Autonomous Actions",
+  "part6-langsmith": "Part VI: Observability with LangSmith",
+  "part7-deployment": "Part VII: Production Deployment",
+  "appendices": "Appendices",
+  "about": {
+    "title": "About the Author",
+    "type": "page"
+  }
+}
