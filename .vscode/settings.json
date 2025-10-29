@@ -1,0 +1,17 @@
+{
+  "chat.mcp.autostart": "newAndOutdated",
+  "chat.mcp.discovery.enabled": true,
+
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true
+  },
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "playwright.updateSnapshots": "all",
+  "playwright.reuseBrowser": false,
+  "playwright.showTrace": false,
+  "github.copilot.chat.executePrompt.enabled": true,
+  "github.copilot.chat.inlineSuggestions.enabled": true,
+  "github.copilot.chat.inlineSuggestions.mode": "always"
+}

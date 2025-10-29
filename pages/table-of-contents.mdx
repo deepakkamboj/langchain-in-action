@@ -4,196 +4,158 @@
 
 ## **PART I: FOUNDATIONS**
 
-### **[Chapter 1: Introduction to LangChain and Agent Architecture](./part1-foundations/chapter1)**
+### **[Chapter 1: Building Your First LangChain Agent](./part1-foundations/chapter1)**
 
-- **1.1** The Evolution of AI Agents: From Chatbots to Context-Aware Systems
-- **1.2** LangChain's Philosophy: Composability, Modularity, and Extensibility
-- **1.3** Core Components Overview: Chains, Agents, Tools, Memory, and Retrievers
-- **1.4** Understanding the Agent Loop: Perception, Reasoning, Action, and Feedback
-- **1.5** Setting Up Your Development Environment
-- **1.6** Your First LangChain Agent: A Simple Q&A System
-- **1.7** Case Study Preview: Multi-Modal Agent Applications Across Industries
+- **1.1** Explore how AI agents evolved over time
+- **1.2** Understand LangChain's vision and design philosophy
+- **1.3** Learn fundamental components: chains, agents, and tools
+- **1.4** Set up your LangChain and API environment
+- **1.5** Build your first question-answering LangChain agent
+- **1.6** Configure development tools for efficient experimentation
+- **1.7** Debug agent behavior using logs and traces
+- **1.8** Test a complete simple QA agent pipeline
+- **1.9** Preview a real-world multimodal LangChain agent example
 
-### **[Chapter 2: Modular LangChain Architecture Patterns](./part1-foundations/chapter2)**
+### **[Chapter 2: Designing Modular and Reusable LangChain Workflows](./part1-foundations/chapter2)**
 
-- **2.1** Component-Based Design: Building Blocks of Extensible Agents
-- **2.2** Chains Deep Dive: Sequential, Transform, and Router Chains
-- **2.3** The Tool Abstraction: Creating Custom Tools and Function Wrappers
-- **2.4** Prompt Templates and Dynamic Prompt Engineering
-- **2.5** Output Parsers: Structuring Agent Responses
-- **2.6** Runnables and LangChain Expression Language (LCEL)
-- **2.7** Design Patterns: Pipeline, Branching, and Parallel Execution
-- **2.8** Building Reusable Component Libraries
+- **2.1** Identify essential LangChain workflow components
+- **2.2** Apply modular design using chain concepts
+- **2.3** Create and register reusable custom tools
+- **2.4** Design effective dynamic prompt templates
+- **2.5** Parse structured results using output parsers
+- **2.6** Implement LCEL for flexible compositions
+- **2.7** Apply design patterns to organize logic
+- **2.8** Build modular libraries for reusable agents
 
-### **[Chapter 3: Large Language Models and Agent Reasoning](./part1-foundations/chapter3)**
+### **[Chapter 3: LLM Reasoning and Agent Intelligence](./part1-foundations/chapter3)**
 
-- **3.1** LLM Integration: OpenAI, Anthropic, Open Source Models
-- **3.2** Prompt Engineering for Agent Behavior: System Messages, Few-Shot Learning
-- **3.3** Reasoning Strategies: ReAct, Plan-and-Execute, Tree of Thoughts
-- **3.4** Agent Types: Zero-Shot, Conversational, Structured Tool Agents
-- **3.5** Handling LLM Limitations: Hallucinations, Context Windows, Rate Limits
-- **3.6** Model Selection and Fallback Strategies
-- **3.7** Cost Optimization: Token Management and Caching
-- **3.8** Implementing Custom Agent Executors
+- **3.1** Integrate various LLMs into workflows
+- **3.2** Master prompt engineering for better outputs
+- **3.3** Implement reasoning frameworks like ReAct, ToT
+- **3.4** Compare and use different LangChain agents
+- **3.5** Handle LLM limitations through structured logic
+- **3.6** Select suitable models for specific needs
+- **3.7** Optimize inference cost and performance efficiency
+- **3.8** Create custom executors for complex orchestration
 
 ---
 
 ## **PART II: MULTI-MODAL INTEGRATION**
 
-### **[Chapter 4: Multi-Modal Data Pipelines](./part2-multimodal/chapter4)**
+### **[Chapter 4: Building Multi-Modal Pipelines](./part2-multimodal/chapter4)**
 
-- **4.1** Understanding Modality: Text, Image, Audio, Video, and Sensor Data
-- **4.2** Architecting Unified Data Ingestion Pipelines
-- **4.3** Document Loaders: PDFs, Images, Audio Transcription, Video Processing
-- **4.4** Text Splitters and Chunking Strategies for Multi-Modal Content
-- **4.5** Embedding Models: Text, Image, and Cross-Modal Embeddings
-- **4.6** Synchronizing Embeddings Across Modalities
-- **4.7** Temporal Alignment: Handling Time-Series and Streaming Data
-- **4.8** Building a Multi-Modal Data Processing Pipeline
+- **4.1** Understand text, image, and audio modalities
+- **4.2** Build unified multi-modal ingestion pipelines
+- **4.3** Load and preprocess documents and media
+- **4.4** Split and chunk text for context handling
+- **4.5** Generate embeddings across multiple data types
+- **4.6** Synchronize embeddings for unified context alignment
+- **4.7** Align time-series and streaming data processing
+- **4.8** Build scalable multi-modal data processing pipelines
 
-### **[Chapter 5: Computer Vision Integration](./part2-multimodal/chapter5)**
+### **[Chapter 5: Building Vision-Enabled Agents with Visual Intelligence](./part2-multimodal/chapter5)**
 
-- **5.1** Vision Models: CLIP, GPT-4V, LLaVA, and Specialized Models
-- **5.2** Image Understanding: Classification, Object Detection, Scene Analysis
-- **5.3** Optical Character Recognition (OCR) and Document Intelligence
-- **5.4** Integrating Vision APIs with LangChain Tools
-- **5.5** Image-to-Text and Text-to-Image Workflows
-- **5.6** Real-Time Video Stream Processing
-- **5.7** Medical Imaging Case Study: X-Ray and MRI Analysis
-- **5.8** Vision-Language Agent Architecture
+- **5.1** Integrate advanced models like CLIP, GPT-4V
+- **5.2** Analyze and interpret images contextually
+- **5.3** Implement OCR for structured text extraction
+- **5.4** Use external vision APIs for automation
+- **5.5** Build text-to-image and image-to-text systems
+- **5.6** Process and analyze video data streams
+- **5.7** Apply vision models in medical case studies
+- **5.8** Design complete vision-driven agent architectures
 
-### **[Chapter 6: Audio Processing and Voice Integration](./part2-multimodal/chapter6)**
+### **[Chapter 6: Building Conversational Agents with Voice Intelligence](./part2-multimodal/chapter6)**
 
-- **6.1** Speech Recognition: Whisper, Azure Speech, Assembly AI
-- **6.2** Audio Feature Extraction: Prosody, Pitch, Volume, and Pacing
-- **6.3** Text-to-Speech: Natural Voice Generation for Agent Responses
-- **6.4** Building Voice-First Agents with LangChain
-- **6.5** Real-Time Audio Stream Processing
-- **6.6** Audio Sentiment and Emotion Detection
-- **6.7** Multi-Lingual Voice Support and Translation
-- **6.8** Telemedicine Voice Agent: Patient Consultation System
-
----
-
-## **PART III: CONTEXT AND MEMORY**
-
-### **[Chapter 7: Memory Systems for Stateful Agents](./part3-context/chapter7)**
-
-- **7.1** Memory Types: Short-Term, Long-Term, Episodic, and Semantic
-- **7.2** Conversation Buffer and Sliding Window Memory
-- **7.3** Summary Memory and Hierarchical Summarization
-- **7.4** Entity Memory: Tracking People, Places, and Objects
-- **7.5** Vector Store Memory with FAISS, Pinecone, and Weaviate
-- **7.6** Knowledge Graphs for Relational Memory
-- **7.7** Memory Retrieval Strategies and Relevance Scoring
-- **7.8** Hybrid Memory Architectures for Complex Conversations
-
-### **[Chapter 8: Emotional Context Detection and Adaptive Responses](./part3-context/chapter8)**
-
-- **8.1** The Importance of Emotional Intelligence in AI Agents
-- **8.2** Sentiment Analysis: Model Selection and Integration
-- **8.3** Emotion Classification: Joy, Anger, Sadness, Fear, Surprise
-- **8.4** Multi-Modal Emotion Detection: Text, Voice, and Facial Expressions
-- **8.5** Building Emotion-Aware Prompt Templates
-- **8.6** Dynamic Response Generation Based on Emotional State
-- **8.7** Escalation Strategies: Detecting Crisis and Emergency Situations
-- **8.8** Empathetic Agent Design: Healthcare and Mental Wellness Applications
+- **6.1** Use Whisper and Azure for speech recognition
+- **6.2** Extract key features from audio signals
+- **6.3** Implement text-to-speech and speech synthesis
+- **6.4** Build end-to-end voice-first agent workflows
+- **6.5** Enable real-time conversational audio pipelines
+- **6.6** Detect sentiment and emotion from voice
+- **6.7** Support multilingual agents with translation models
+- **6.8** Build voice-enabled telemedicine AI assistants
 
 ---
 
-## **PART IV: ADVANCED RETRIEVAL AND KNOWLEDGE**
+## **PART III: CONTEXT & MEMORY**
 
-### **[Chapter 9: Retrieval-Augmented Generation (RAG) Architecture](./part4-retrieval/chapter9)**
+### **[Chapter 7: Developing Context-Aware Agents with Persistent Memory](./part3-context/chapter7)**
 
-- **9.1** RAG Fundamentals: Retrieval, Context Injection, Generation
-- **9.2** Vector Databases: Setup, Indexing, and Query Optimization
-- **9.3** Retriever Types: Dense, Sparse, Hybrid, and Multi-Vector
-- **9.4** Semantic Search and Similarity Metrics
-- **9.5** Context Window Management and Re-Ranking
-- **9.6** Retriever-Router Chains for Heterogeneous Data Sources
-- **9.7** Handling Retrieval Failures and Fallback Mechanisms
-- **9.8** Building a Production RAG Pipeline
+- **7.1** Understand short-term and long-term memory
+- **7.2** Implement conversation buffers for context tracking
+- **7.3** Build summary memory for dialogue compression
+- **7.4** Apply entity memory for dynamic reference storage
+- **7.5** Integrate vector stores for memory retrieval
+- **7.6** Use knowledge graphs to link relationships
+- **7.7** Implement hybrid memory combining multiple approaches
+- **7.8** Design adaptive memory systems for intelligent agents
 
-### **[Chapter 10: Advanced Knowledge Integration](./part4-retrieval/chapter10)**
+### **[Chapter 8: Designing Emotion-Aware Agents](./part3-context/chapter8)**
 
-- **10.1** Knowledge Graphs: Neo4j, Amazon Neptune Integration
-- **10.2** Graph-Based Reasoning and Relationship Traversal
-- **10.3** Combining Vector Search with Graph Queries
-- **10.4** External APIs and Database Connectors as Knowledge Sources
-- **10.5** Web Search Integration: SerpAPI, Bing, Google Search
-- **10.6** Document Versioning and Knowledge Freshness
-- **10.7** Multi-Source Knowledge Fusion and Conflict Resolution
-- **10.8** Building an Enterprise Knowledge Agent
-
----
-
-## **PART V: TOOL CALLING AND AUTONOMOUS ACTIONS**
-
-### **[Chapter 11: Tool Calling and Function Execution](./part5-toolcalling/chapter11)**
-
-- **11.1** The Tool Calling Paradigm: From Commands to Autonomous Actions
-- **11.2** OpenAI Function Calling and Structured Outputs
-- **11.3** Creating Custom LangChain Tools and Toolkits
-- **11.4** Tool Selection and Reasoning: When to Call Which Tool
-- **11.5** API Integration Patterns: REST, GraphQL, gRPC
-- **11.6** Database Operations: SQL, NoSQL Query Generation
-- **11.7** Error Handling and Retry Logic in Tool Execution
-- **11.8** Security Considerations: Sandboxing and Permission Models
-
-### **[Chapter 12: Planning and Multi-Step Reasoning](./part5-toolcalling/chapter12)**
-
-- **12.1** Plan-and-Execute Architecture Overview
-- **12.2** Task Decomposition: Breaking Complex Goals into Steps
-- **12.3** Planner Agents: LLMPlanner, BabyAGI, AutoGPT Patterns
-- **12.4** Execution Agents: Step-by-Step Task Completion
-- **12.5** Self-Correction and Adaptive Replanning
-- **12.6** Multi-Agent Collaboration and Orchestration
-- **12.7** Context Handoffs Between Agents
-- **12.8** Emergency Response Automation: Multi-Step Crisis Management
+- **8.1** Understand emotional intelligence in AI systems
+- **8.2** Train sentiment analysis and emotion classifiers
+- **8.3** Detect emotions across multiple data modalities
+- **8.4** Design emotion-aware and context-sensitive prompts
+- **8.5** Generate adaptive and empathetic agent responses
+- **8.6** Simulate real-world emotion detection scenarios
+- **8.7** Implement crisis management using adaptive logic
+- **8.8** Build emotionally aware conversational agent prototypes
 
 ---
 
-## **PART VI: OBSERVABILITY WITH LANGSMITH**
+## **PART IV: KNOWLEDGE & RETRIEVAL**
 
-### **[Chapter 13: Debugging and Tracing with LangSmith](./part6-langsmith/chapter13)**
+### **[Chapter 9: Building Retrieval-Enhanced Agents](./part4-retrieval/chapter9)**
 
-- **13.1** Introduction to LangSmith: Purpose and Capabilities
-- **13.2** Setting Up LangSmith for Your Projects
-- **13.3** Tracing Agent Execution: Steps, Tools, and LLM Calls
-- **13.4** Visualizing Agent Reasoning and Decision Paths
-- **13.5** Debugging Failed Chains and Error Analysis
-- **13.6** Comparing Agent Runs: A/B Testing Prompts and Strategies
-- **13.7** Token Usage and Cost Tracking
-- **13.8** Exporting Traces for Offline Analysis
+- **9.1** Understand principles behind RAG-based systems
+- **9.2** Set up and configure vector databases
+- **9.3** Implement different retriever and reranker types
+- **9.4** Build semantic search and context retrieval flows
+- **9.5** Manage token limits with smart context windows
+- **9.6** Chain retrievers and routers for better recall
+- **9.7** Handle failure and fallback within RAG pipelines
+- **9.8** Build complete production-ready RAG architectures
 
-### **[Chapter 14: Monitoring and Evaluation with LangSmith](./part6-langsmith/chapter14)**
+### **[Chapter 10: Fusing Knowledge Networks for Advanced Reasoning](./part4-retrieval/chapter10)**
 
-- **14.1** Creating Evaluation Datasets for Agent Performance
-- **14.2** Automated Testing: Unit Tests, Integration Tests, End-to-End Tests
-- **14.3** Metrics and KPIs: Accuracy, Latency, Success Rate, User Satisfaction
-- **14.4** Continuous Evaluation Pipelines in CI/CD
-- **14.5** Human-in-the-Loop Evaluation and Feedback Collection
-- **14.6** Prompt Versioning and Regression Testing
-- **14.7** Real-Time Monitoring Dashboards with OpenTelemetry
-- **14.8** Anomaly Detection and Alerting for Production Agents
+- **10.1** Integrate reasoning using knowledge graph systems
+- **10.2** Perform relationship traversal and knowledge discovery
+- **10.3** Combine vector and graph-based search methods
+- **10.4** Connect external APIs for real-time insights
+- **10.5** Integrate web search and live data feeds
+- **10.6** Manage knowledge freshness and version control
+- **10.7** Resolve conflicts across multiple data sources
+- **10.8** Design enterprise-level decision-making AI agents
 
 ---
 
-## **PART VII: PRODUCTION DEPLOYMENT**
+## **PART V: TOOL EXECUTION**
 
-### **[Chapter 15: Enterprise Deployment and Operations](./part7-deployment/chapter15)**
+### **[Chapter 11: Creating Autonomous Agents that Perform Real-World Tasks](./part5-toolexecution/chapter11)**
 
-- **15.1** Production Readiness Checklist for LangChain Agents
-- **15.2** Containerization with Docker: Multi-Modal Agent Images
-- **15.3** Orchestration with Kubernetes: Scaling and High Availability
-- **15.4** API Gateway Patterns: Rate Limiting, Authentication, Authorization
-- **15.5** Security Best Practices: Data Privacy, PII Handling, Compliance
-- **15.6** Streaming Responses and WebSocket Integration
-- **15.7** Performance Optimization: Caching, Load Balancing, CDNs
-- **15.8** Monitoring Production Systems: Logs, Metrics, Distributed Tracing
-- **15.9** Incident Response and Disaster Recovery
-- **15.10** Cost Management and Resource Optimization
-- **15.11** Case Study Synthesis: Deploying a Multi-Modal Healthcare Agent
+- **11.1** Understand tool abstraction and calling mechanisms
+- **11.2** Implement OpenAI function calls within LangChain
+- **11.3** Create and register custom reusable toolkits
+- **11.4** Apply selection logic for multiple tool execution
+- **11.5** Integrate REST, GraphQL, and gRPC-based APIs
+- **11.6** Perform secure database operations via agents
+- **11.7** Handle errors and implement retry mechanisms
+- **11.8** Build sandboxed, secure multi-tool agent workflows
+
+---
+
+## **PART VI: PLANNING & EVALUATION**
+
+### **[Chapter 12: Planning, Collaboration, and Evaluating Autonomous Agents](./part6-planning/chapter12)**
+
+- **12.1** Understand planner-executor architecture design principles
+- **12.2** Implement task decomposition and execution planning
+- **12.3** Build planner agents like BabyAGI and AutoGPT
+- **12.4** Develop autonomous execution and self-correction logic
+- **12.5** Orchestrate collaboration between multiple specialized agents
+- **12.6** Manage context handoffs across complex workflows
+- **12.7** Automate response strategies for dynamic scenarios
+- **12.8** Evaluate agent performance using measurable metrics
 
 ---
 
@@ -203,15 +165,26 @@
 
 - Core classes, methods, and patterns
 
-### **[Appendix B: Model and Service Provider Directory](./appendices/providers)**
+### **[Appendix B: Acronyms, Comparisons & Reference Tables](./appendices/acronyms-comparisons)**
+
+- AI/ML acronyms and terminology
+- Model comparison tables (LLMs, vector databases, embeddings)
+- Framework comparisons and benchmarks
+- Cost optimization guidelines
+- Performance metrics and benchmarks
+- Development environment setup
+- Error codes and troubleshooting reference
+- Production readiness checklists
+
+### **[Appendix C: Model and Service Provider Directory](./appendices/providers)**
 
 - LLM providers, embedding models, vector databases, APIs
 
-### **[Appendix C: Troubleshooting Guide](./appendices/troubleshooting)**
+### **[Appendix D: Troubleshooting Guide](./appendices/troubleshooting)**
 
 - Common errors and solutions
 
-### **[Appendix D: Community Resources and Further Learning](./appendices/resources)**
+### **[Appendix E: Community Resources and Further Learning](./appendices/resources)**
 
 - GitHub repositories, tutorials, research papers
 

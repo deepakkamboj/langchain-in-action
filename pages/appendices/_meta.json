@@ -1,7 +1,8 @@
 {
   "index": "Appendices Overview",
   "api-reference": "Appendix A: LangChain API Quick Reference",
-  "providers": "Appendix B: Model and Service Provider Directory",
-  "troubleshooting": "Appendix C: Troubleshooting Guide",
-  "resources": "Appendix D: Community Resources and Further Learning"
+  "acronyms-comparisons": "Appendix B: Acronyms, Comparisons & Reference Tables",
+  "providers": "Appendix C: Model and Service Provider Directory",
+  "troubleshooting": "Appendix D: Troubleshooting Guide",
+  "resources": "Appendix E: Community Resources and Further Learning"
 }
