@@ -1,10 +1,12 @@
+import { Callout } from "nextra/components";
+
 # Chapter 1: Building Your First LangChain Agent
 
 ## Overview
 
 Welcome to the world of agent engineering. In this foundational chapter, you'll discover LangChain—the platform for agent engineering—and learn how it transforms the complex challenge of building autonomous AI systems into manageable, composable pieces. We'll start by understanding what LangChain is and why it exists, then dive into building your first working agent that can reason, use tools, and interact naturally with users. By the end, you'll have both theoretical understanding and practical experience with the platform that's revolutionizing how we build AI agents.
 
-> **QUOTE**: "LangChain is the platform for agent engineering. Build agents with any model provider and deploy them anywhere."
+> "LangChain is the platform for agent engineering. Build agents with any model provider and deploy them anywhere."
 >
 > _— LangChain Documentation_
 
@@ -102,7 +104,10 @@ agent.invoke(
 
 **When to use**: When you have advanced needs requiring heavy customization and carefully controlled latency.
 
-> **IMPORTANT**: LangChain agents are built on top of LangGraph, giving you access to all these advanced features even when using the simpler LangChain interface.
+<Callout type="warning">
+  LangChain agents are built on top of LangGraph, giving you access to all these
+  advanced features even when using the simpler LangChain interface.
+</Callout>
 
 #### 3. LangSmith Platform: Observability and Operations
 
@@ -155,7 +160,10 @@ result = translation_chain.invoke({
 print(result)  # "¡Hola, mundo!"
 ```
 
-> **BEST PRACTICE**: Start with LangChain for rapid prototyping, then use LangGraph when you need fine-grained control over agent behavior and execution flow.
+<Callout>
+  Start with LangChain for rapid prototyping, then use LangGraph when you need
+  fine-grained control over agent behavior and execution flow.
+</Callout>
 
 ### From Simple Chatbots to Intelligent Agents: The Evolution
 
@@ -335,7 +343,11 @@ tools = [CustomDatabaseTool()]
 agent = create_agent(model="gpt-4", tools=tools)
 ```
 
-> **BEST PRACTICE**: Extend LangChain with custom components rather than working around the framework. This ensures you benefit from all platform features like observability and error handling.
+<Callout>
+  Extend LangChain with custom components rather than working around the
+  framework. This ensures you benefit from all platform features like
+  observability and error handling.
+</Callout>
 
 ---
 
@@ -1533,7 +1545,8 @@ Congratulations! You now have an AI agent that can:
 - **Structure Responses**: Define clear output formats for application integration
 - **Add Context**: Use runtime context for personalized experiences
 - **Remember Conversations**: Implement memory for natural dialogue
-  </Callout>
+
+</Callout>
 
 ### Alternative: Using OpenAI for Basic Implementation
 
