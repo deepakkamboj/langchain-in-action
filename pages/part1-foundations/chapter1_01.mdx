@@ -56,6 +56,21 @@ flowchart TD
     O[Complex Workflows] --> C
     P[Production Systems] --> D
     end
+
+    %% Color styling
+    classDef platform fill:#4a90e2,stroke:#357abd,stroke-width:3px,color:#fff
+    classDef framework fill:#7b68ee,stroke:#6a5acd,stroke-width:2px,color:#fff
+    classDef langgraph fill:#ff6b6b,stroke:#e55555,stroke-width:2px,color:#fff
+    classDef langsmith fill:#4ecdc4,stroke:#45b7aa,stroke-width:2px,color:#fff
+    classDef features fill:#ffd93d,stroke:#e6c200,stroke-width:1px,color:#333
+    classDef usecases fill:#95e1d3,stroke:#7bc4b8,stroke-width:2px,color:#333
+
+    class A platform
+    class B framework
+    class C langgraph
+    class D langsmith
+    class E,F,G,H,I,J,K,L,M features
+    class N,O,P usecases
 ```
 
 #### 1. LangChain Framework: Quick Start to Agent Building
@@ -300,6 +315,21 @@ graph TD
     G2[Tools: Execute Actions]
     H2[Retriever: Find Information]
     end
+
+    %% Color styling for component types
+    classDef input fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,color:#01579b
+    classDef processing fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    classDef model fill:#fff3e0,stroke:#f57c00,stroke-width:3px,color:#e65100
+    classDef output fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#1b5e20
+    classDef supporting fill:#fff8e1,stroke:#ffa000,stroke-width:2px,color:#ff6f00
+    classDef responsibilities fill:#fce4ec,stroke:#c2185b,stroke-width:1px,color:#880e4f
+
+    class A input
+    class B,D processing
+    class C model
+    class E output
+    class F,G,H supporting
+    class B2,C2,D2,F2,G2,H2 responsibilities
 ```
 
 | Component Type | Single Responsibility      | Example Use Cases              |
@@ -502,6 +532,30 @@ agent_executor = AgentExecutor(agent=agent, tools=tools)
 ### LangChain's Architecture Stack
 
 LangChain organizes complexity through a clear layered architecture:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    APPLICATION LAYER                        │
+│ Web Apps • APIs • CLI Tools • Jupyter Notebooks • Dashboards│
+├─────────────────────────────────────────────────────────────┤
+│                      AGENT LAYER                            │
+│   AgentExecutor • ReAct • Planning • Multi-Agent Systems    │
+├─────────────────────────────────────────────────────────────┤
+│                      CHAIN LAYER                            │
+│  Sequential • Router • Map-Reduce • LCEL • Custom Chains    │
+├─────────────────────────────────────────────────────────────┤
+│                    COMPONENT LAYER                          │
+│ Tools • Memory • Retrievers • Parsers • Callbacks • Guards  │
+├─────────────────────────────────────────────────────────────┤
+│                      MODEL LAYER                            │
+│    OpenAI • Anthropic • HuggingFace • Local • Custom LLMs   │
+├─────────────────────────────────────────────────────────────┤
+│                      DATA LAYER                             │
+│   Vector Stores • Databases • APIs • File Systems • Web     │
+└─────────────────────────────────────────────────────────────┘
+```
+
+Other one
 
 ```mermaid
 graph TD
