@@ -491,26 +491,71 @@ agent_executor = AgentExecutor(agent=agent, tools=tools)
 
 LangChain organizes complexity through a clear layered architecture:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    APPLICATION LAYER                         │
-│  Web Apps • APIs • CLI Tools • Jupyter Notebooks • Dashboards │
-├─────────────────────────────────────────────────────────────┤
-│                      AGENT LAYER                            │
-│    AgentExecutor • ReAct • Planning • Multi-Agent Systems    │
-├─────────────────────────────────────────────────────────────┤
-│                      CHAIN LAYER                            │
-│   Sequential • Router • Map-Reduce • LCEL • Custom Chains    │
-├─────────────────────────────────────────────────────────────┤
-│                    COMPONENT LAYER                          │
-│  Tools • Memory • Retrievers • Parsers • Callbacks • Guards  │
-├─────────────────────────────────────────────────────────────┤
-│                      MODEL LAYER                            │
-│    OpenAI • Anthropic • HuggingFace • Local • Custom LLMs    │
-├─────────────────────────────────────────────────────────────┤
-│                      DATA LAYER                             │
-│   Vector Stores • Databases • APIs • File Systems • Web     │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+graph TD
+    subgraph "APPLICATION LAYER"
+        A1[Web Apps]
+        A2[APIs]
+        A3[CLI Tools]
+        A4[Jupyter Notebooks]
+        A5[Dashboards]
+    end
+
+    subgraph "AGENT LAYER"
+        B1[AgentExecutor]
+        B2[ReAct]
+        B3[Planning]
+        B4[Multi-Agent Systems]
+    end
+
+    subgraph "CHAIN LAYER"
+        C1[Sequential]
+        C2[Router]
+        C3[Map-Reduce]
+        C4[LCEL]
+        C5[Custom Chains]
+    end
+
+    subgraph "COMPONENT LAYER"
+        D1[Tools]
+        D2[Memory]
+        D3[Retrievers]
+        D4[Parsers]
+        D5[Callbacks]
+        D6[Guards]
+    end
+
+    subgraph "MODEL LAYER"
+        E1[OpenAI]
+        E2[Anthropic]
+        E3[HuggingFace]
+        E4[Local]
+        E5[Custom LLMs]
+    end
+
+    subgraph "DATA LAYER"
+        F1[Vector Stores]
+        F2[Databases]
+        F3[APIs]
+        F4[File Systems]
+        F5[Web]
+    end
+
+    A1 --> B1
+    A2 --> B2
+    A3 --> B3
+    B1 --> C1
+    B2 --> C2
+    B3 --> C3
+    C1 --> D1
+    C2 --> D2
+    C3 --> D3
+    D1 --> E1
+    D2 --> E2
+    D3 --> E3
+    E1 --> F1
+    E2 --> F2
+    E3 --> F3
 ```
 
 **Layer Responsibilities:**
@@ -998,7 +1043,11 @@ The agent would:
 
 Let's establish a complete development environment following the official LangChain installation guide. This setup will serve as the foundation for all projects throughout this book.
 
-> **TIP**: LangChain provides integrations to hundreds of LLMs and thousands of other integrations through independent provider packages, giving you maximum flexibility in your agent development.
+<Callout type="info">
+  LangChain provides integrations to hundreds of LLMs and thousands of other
+  integrations through independent provider packages, giving you maximum
+  flexibility in your agent development.
+</Callout>
 
 ### System Requirements
 
@@ -1041,7 +1090,10 @@ pip install -U python-dotenv         # Environment variable management
 pip install -U jupyter              # Interactive development
 ```
 
-> **IMPORTANT**: LangChain uses independent provider packages. Only install the integrations you need to keep your dependencies clean and avoid conflicts.
+<Callout type="warning">
+  LangChain uses independent provider packages. Only install the integrations
+  you need to keep your dependencies clean and avoid conflicts.
+</Callout>
 
 #### 3. Install Additional Tools for Development
 
@@ -1080,7 +1132,10 @@ LANGCHAIN_TRACING_V2=true
 LANGCHAIN_PROJECT=langchain-book-chapter1
 ```
 
-> **SECURITY CONSIDERATION**: Never commit API keys to version control. Add `.env` to your `.gitignore` file immediately after creation.
+<Callout type="error">
+  Never commit API keys to version control. Add `.env` to your `.gitignore` file
+  immediately after creation.
+</Callout>
 
 #### Configuration Management
 
@@ -1295,7 +1350,11 @@ response = agent.invoke({
 print(response)
 ```
 
-> **TIP**: For this example, you'll need to set up an Anthropic account and set the `ANTHROPIC_API_KEY` environment variable. The official docs recommend Claude Sonnet 4.5 for its excellent reasoning capabilities.
+<Callout type="info">
+  For this example, you'll need to set up an Anthropic account and set the
+  `ANTHROPIC_API_KEY` environment variable. The official docs recommend Claude
+  Sonnet 4.5 for its excellent reasoning capabilities.
+</Callout>
 
 ### Production-Ready Agent: Real-World Implementation
 
@@ -1343,7 +1402,11 @@ def get_user_location(runtime: ToolRuntime[Context, Any]) -> str:
     return "Florida" if user_id == "1" else "SF"
 ```
 
-> **BEST PRACTICE**: Tools should be well-documented: their name, description, and argument names become part of the model's prompt. LangChain's `@tool` decorator adds metadata and enables runtime injection via the `ToolRuntime` parameter.
+<Callout>
+  Tools should be well-documented: their name, description, and argument names
+  become part of the model's prompt. LangChain's `@tool` decorator adds metadata
+  and enables runtime injection via the `ToolRuntime` parameter.
+</Callout>
 
 #### Step 3: Configure Your Model
 
@@ -1378,7 +1441,10 @@ from langgraph.checkpoint.memory import InMemorySaver
 checkpointer = InMemorySaver()
 ```
 
-> **IMPORTANT**: In production, use a persistent checkpointer that saves to a database. The in-memory version is only suitable for development and testing.
+<Callout type="warning">
+  In production, use a persistent checkpointer that saves to a database. The
+  in-memory version is only suitable for development and testing.
+</Callout>
 
 #### Step 6: Create and Run the Production Agent
 
@@ -1459,13 +1525,15 @@ Congratulations! You now have an AI agent that can:
 ✅ **Handle user-specific information through context**  
 ✅ **Maintain conversation state across interactions**
 
-> **THINGS TO REMEMBER**:
->
-> - **Start Simple**: Begin with basic agents, then add complexity
-> - **Use Official Examples**: Follow LangChain documentation for best practices
-> - **Structure Responses**: Define clear output formats for application integration
-> - **Add Context**: Use runtime context for personalized experiences
-> - **Remember Conversations**: Implement memory for natural dialogue
+<Callout>
+**Things to Remember:**
+
+- **Start Simple**: Begin with basic agents, then add complexity
+- **Use Official Examples**: Follow LangChain documentation for best practices
+- **Structure Responses**: Define clear output formats for application integration
+- **Add Context**: Use runtime context for personalized experiences
+- **Remember Conversations**: Implement memory for natural dialogue
+  </Callout>
 
 ### Alternative: Using OpenAI for Basic Implementation
 
