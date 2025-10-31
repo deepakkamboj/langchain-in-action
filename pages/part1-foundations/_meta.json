@@ -1,6 +1,7 @@
 {
   "index": "Part I Overview",
   "chapter1": "Chapter 1: Building Your First LangChain Agent",
+  "chapter1_01": "Chapter 1: Building Your First LangChain Agent",
   "chapter2": "Chapter 2: Designing Modular and Reusable LangChain Workflows",
   "chapter3": "Chapter 3: LLM Reasoning and Agent Intelligence"
 }
