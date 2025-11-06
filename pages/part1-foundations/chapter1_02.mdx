@@ -131,10 +131,7 @@ agent.invoke(
 
 **When to use**: When you have advanced needs requiring heavy customization and carefully controlled latency.
 
-<Callout type="warning">
-  LangChain agents are built on top of LangGraph, giving you access to all these
-  advanced features even when using the simpler LangChain interface.
-</Callout>
+**WARNING**: LangChain agents are built on top of LangGraph, giving you access to all these advanced features even when using the simpler LangChain interface.
 
 #### 3. LangSmith Platform: Observability and Operations
 
@@ -187,10 +184,7 @@ result = translation_chain.invoke({
 print(result)  # "¡Hola, mundo!"
 ```
 
-<Callout>
-  Start with LangChain for rapid prototyping, then use LangGraph when you need
-  fine-grained control over agent behavior and execution flow.
-</Callout>
+**TIP**: Start with LangChain for rapid prototyping, then use LangGraph when you need fine-grained control over agent behavior and execution flow.
 
 ### From Simple Chatbots to Intelligent Agents: The Evolution
 
@@ -385,11 +379,7 @@ tools = [CustomDatabaseTool()]
 agent = create_agent(model="gpt-4", tools=tools)
 ```
 
-<Callout>
-  Extend LangChain with custom components rather than working around the
-  framework. This ensures you benefit from all platform features like
-  observability and error handling.
-</Callout>
+**BEST PRACTICE**: Extend LangChain with custom components rather than working around the framework. This ensures you benefit from all platform features like observability and error handling.
 
 ---
 
@@ -1121,11 +1111,7 @@ The agent would:
 
 Let's establish a complete development environment following the official LangChain installation guide. This setup will serve as the foundation for all projects throughout this book.
 
-<Callout type="info">
-  LangChain provides integrations to hundreds of LLMs and thousands of other
-  integrations through independent provider packages, giving you maximum
-  flexibility in your agent development.
-</Callout>
+**IMPORTANT**: LangChain provides integrations to hundreds of LLMs and thousands of other integrations through independent provider packages, giving you maximum flexibility in your agent development.
 
 ### System Requirements
 
@@ -1168,10 +1154,7 @@ pip install -U python-dotenv         # Environment variable management
 pip install -U jupyter              # Interactive development
 ```
 
-<Callout type="warning">
-  LangChain uses independent provider packages. Only install the integrations
-  you need to keep your dependencies clean and avoid conflicts.
-</Callout>
+**WARNING**: LangChain uses independent provider packages. Only install the integrations you need to keep your dependencies clean and avoid conflicts.
 
 #### 3. Install Additional Tools for Development
 
@@ -1210,10 +1193,7 @@ LANGCHAIN_TRACING_V2=true
 LANGCHAIN_PROJECT=langchain-book-chapter1
 ```
 
-<Callout type="error">
-  Never commit API keys to version control. Add `.env` to your `.gitignore` file
-  immediately after creation.
-</Callout>
+**WARNING**: Never commit API keys to version control. Add `.env` to your `.gitignore` file immediately after creation.
 
 #### Configuration Management
 
@@ -1428,11 +1408,7 @@ response = agent.invoke({
 print(response)
 ```
 
-<Callout type="info">
-  For this example, you'll need to set up an Anthropic account and set the
-  `ANTHROPIC_API_KEY` environment variable. The official docs recommend Claude
-  Sonnet 4.5 for its excellent reasoning capabilities.
-</Callout>
+**TIP**: For this example, you'll need to set up an Anthropic account and set the `ANTHROPIC_API_KEY` environment variable. The official docs recommend Claude Sonnet 4.5 for its excellent reasoning capabilities.
 
 ### Production-Ready Agent: Real-World Implementation
 
@@ -1480,11 +1456,7 @@ def get_user_location(runtime: ToolRuntime[Context, Any]) -> str:
     return "Florida" if user_id == "1" else "SF"
 ```
 
-<Callout>
-  Tools should be well-documented: their name, description, and argument names
-  become part of the model's prompt. LangChain's `@tool` decorator adds metadata
-  and enables runtime injection via the `ToolRuntime` parameter.
-</Callout>
+**BEST PRACTICE**: Tools should be well-documented: their name, description, and argument names become part of the model's prompt. LangChain's `@tool` decorator adds metadata and enables runtime injection via the `ToolRuntime` parameter.
 
 #### Step 3: Configure Your Model
 
@@ -1519,10 +1491,7 @@ from langgraph.checkpoint.memory import InMemorySaver
 checkpointer = InMemorySaver()
 ```
 
-<Callout type="warning">
-  In production, use a persistent checkpointer that saves to a database. The
-  in-memory version is only suitable for development and testing.
-</Callout>
+**WARNING**: In production, use a persistent checkpointer that saves to a database. The in-memory version is only suitable for development and testing.
 
 #### Step 6: Create and Run the Production Agent
 
@@ -1603,16 +1572,13 @@ Congratulations! You now have an AI agent that can:
 ✅ **Handle user-specific information through context**  
 ✅ **Maintain conversation state across interactions**
 
-<Callout>
-**Things to Remember:**
+**THINGS TO REMEMBER**:
 
 - **Start Simple**: Begin with basic agents, then add complexity
 - **Use Official Examples**: Follow LangChain documentation for best practices
 - **Structure Responses**: Define clear output formats for application integration
 - **Add Context**: Use runtime context for personalized experiences
 - **Remember Conversations**: Implement memory for natural dialogue
-
-</Callout>
 
 ### Alternative: Using OpenAI for Basic Implementation
 
