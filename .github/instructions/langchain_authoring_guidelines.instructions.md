@@ -71,6 +71,7 @@ Search through ingested LangChain PDFs using semantic search to find relevant pa
 - Start with limit of 5, increase to 10-20 for comprehensive research
 - Cross-reference multiple results for complete understanding
 - Always cite source documents in your content
+- ALWAYS Convert em dashes (—) to hyphens, commas, semicolons, parentheses, or remove them entirely
 
 #### 2. **ingest_file** - Add New Documentation
 
