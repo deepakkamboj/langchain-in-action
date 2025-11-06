@@ -1,0 +1,17 @@
+{
+  "servers": {
+    "local-rag": {
+      "command": "node",
+      "args": ["--no-warnings", "E:/hack/mcp-local-rag/dist/index.js"],
+      "env": {
+        "BASE_DIR": "E:/pdfs",
+        "DB_PATH": "E:/rag-data/lancedb",
+        "CACHE_DIR": "E:/rag-data/models",
+        "MODEL_NAME": "Xenova/all-MiniLM-L6-v2",
+        "MAX_FILE_SIZE": "209715200",
+        "CHUNK_SIZE": "1024",
+        "CHUNK_OVERLAP": "200"
+      }
+    }
+  }
+}
